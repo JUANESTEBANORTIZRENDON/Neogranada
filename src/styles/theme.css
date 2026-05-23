@@ -1,0 +1,92 @@
+:root {
+  color-scheme: dark;
+  --neo-background: #020617;
+  --neo-foreground: #f8fafc;
+  --neo-primary: #0f172a;
+  --neo-primary-foreground: #ffffff;
+  --neo-secondary: #800020;
+  --neo-secondary-foreground: #ffffff;
+  --neo-neoblue: #0b192c;
+  --neo-neoblue-foreground: #ffffff;
+  --neo-accent: #d4af37;
+  --neo-accent-foreground: #020617;
+  --neo-cyan-neon: #22d3ee;
+  --neo-glass: rgba(11, 25, 44, 0.68);
+  --neo-glass-border: rgba(34, 211, 238, 0.34);
+  --neo-glass-highlight: rgba(34, 211, 238, 0.13);
+  --neo-glass-red: rgba(128, 0, 32, 0.42);
+  --neo-glass-red-border: rgba(128, 0, 32, 0.62);
+  --neo-grid-line: rgba(34, 211, 238, 0.12);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --neo-background: #edf8ff;
+  --neo-foreground: #071827;
+  --neo-primary: #ffffff;
+  --neo-primary-foreground: #071827;
+  --neo-secondary: #8f1238;
+  --neo-secondary-foreground: #ffffff;
+  --neo-neoblue: #dff5ff;
+  --neo-neoblue-foreground: #071827;
+  --neo-accent: #b88913;
+  --neo-accent-foreground: #071827;
+  --neo-cyan-neon: #0891b2;
+  --neo-glass: rgba(255, 255, 255, 0.76);
+  --neo-glass-border: rgba(8, 145, 178, 0.38);
+  --neo-glass-highlight: rgba(8, 145, 178, 0.18);
+  --neo-glass-red: rgba(255, 245, 248, 0.86);
+  --neo-glass-red-border: rgba(143, 18, 56, 0.28);
+  --neo-grid-line: rgba(8, 145, 178, 0.16);
+}
+
+@theme inline {
+  --color-background: var(--neo-background);
+  --color-foreground: var(--neo-foreground);
+
+  --color-primary: var(--neo-primary);
+  --color-primary-foreground: var(--neo-primary-foreground);
+
+  --color-secondary: var(--neo-secondary);
+  --color-secondary-foreground: var(--neo-secondary-foreground);
+
+  --color-neoblue: var(--neo-neoblue);
+  --color-neoblue-foreground: var(--neo-neoblue-foreground);
+
+  --color-accent: var(--neo-accent);
+  --color-accent-foreground: var(--neo-accent-foreground);
+  --color-cyan-neon: var(--neo-cyan-neon);
+
+  --color-glass: var(--neo-glass);
+  --color-glass-border: var(--neo-glass-border);
+  --color-glass-highlight: var(--neo-glass-highlight);
+
+  --color-glass-red: var(--neo-glass-red);
+  --color-glass-red-border: var(--neo-glass-red-border);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Rajdhani', sans-serif;
+}
+
+html,
+body {
+  background: var(--neo-background);
+}
+
+body {
+  transition: background-color 240ms ease, color 240ms ease;
+}
+
+.neo-grid-overlay {
+  background-image:
+    linear-gradient(var(--neo-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--neo-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.14), transparent);
+  background-size: 72px 72px, 72px 72px, 100% 100%;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+:root[data-theme='light'] .neo-grid-overlay {
+  opacity: 0.52;
+}
