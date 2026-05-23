@@ -5,6 +5,7 @@ import Footer from "./components/layout/Footer";
 import InicioView from "./routes/InicioView";
 import EstadoView from "./routes/EstadoView";
 import InnovacionesView from "./routes/InnovacionesView";
+import InnovationSystemView from "./routes/InnovationSystemView";
 import ParticipacionView from "./routes/ParticipacionView";
 import ConstitucionView from "./routes/ConstitucionView";
 import PoderPublicoView from "./routes/PoderPublicoView";
@@ -32,6 +33,7 @@ function AppRoutes() {
           <Route path="/inicio" element={<InicioView />} />
           <Route path="/estado" element={<EstadoView />} />
           <Route path="/innovaciones" element={<InnovacionesView />} />
+          <Route path="/innovaciones/:slug" element={<InnovationSystemView />} />
           <Route path="/participacion" element={<ParticipacionView />} />
           <Route path="/constitucion" element={<ConstitucionView />} />
           <Route path="/constitucion-base" element={<ConstitucionView />} />
