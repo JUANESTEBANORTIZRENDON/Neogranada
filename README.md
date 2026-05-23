@@ -37,8 +37,32 @@ La navegación usa rutas reales de SPA, no anclas de scroll.
 
 Para esta etapa el proyecto debe desplegarse como **Static Site**.
 
-- Build command: `npm install && npm run build`
-- Publish directory: `dist`
+1. En Render, haz clic en `+ New`.
+2. Selecciona `Static Site`.
+3. Conecta tu cuenta de GitHub si Render lo pide.
+4. Elige el repositorio `JUANESTEBANORTIZRENDON/Neogranada`.
+5. Configura el sitio así:
+
+```txt
+Name: neogranada
+Branch: main
+Root Directory: dejar vacío
+Build Command: npm install && npm run build
+Publish Directory: dist
+```
+
+6. Agrega la regla necesaria para React Router en `Settings` -> `Redirects/Rewrites`:
+
+```txt
+Source: /*
+Destination: /index.html
+Action: Rewrite
+```
+
+Esta regla se configura en Render, no en el código. Permite que rutas como `/estado`, `/participacion`, `/constitucion-base` y `/poder-publico` funcionen al abrirse directamente o al recargar la página.
+
+7. Guarda los cambios.
+8. Si Render no redeploya solo, usa `Manual Deploy` -> `Deploy latest commit`.
 
 También existe `npm run start` para servir Vite escuchando en `0.0.0.0` cuando sea útil en entornos de prueba.
 

@@ -24,7 +24,7 @@ export default function InicioView() {
               República de Neogranada
             </h1>
             <p className="text-lg md:text-2xl text-accent font-medium max-w-2xl mx-auto lg:mx-0 tracking-wide italic mt-4">
-              “Poder con razón, justicia para futuro.”
+              “Poder con razón, justicia para el futuro.”
             </p>
 
             <p className="mt-7 text-foreground/82 leading-relaxed text-base md:text-lg max-w-2xl mx-auto lg:mx-0">
