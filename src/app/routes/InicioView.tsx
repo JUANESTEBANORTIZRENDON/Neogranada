@@ -1,9 +1,10 @@
 ﻿import { Link } from "react-router";
-import { ChevronRight, Flag, ShieldCheck, Sparkles } from "lucide-react";
+import { ChevronRight, Flag, Map, ShieldCheck, Sparkles } from "lucide-react";
 import GlassCard from "../components/cards/GlassCard";
 import { useAnimeOnView } from "../hooks/useAnimeOnView";
 import escudo from "../../imports/image-5.png";
 import bandera from "../../imports/image-4.png";
+import mapa from "../../imports/Maps.jpeg";
 
 export default function InicioView() {
   const viewRef = useAnimeOnView<HTMLElement>();
@@ -66,6 +67,16 @@ export default function InicioView() {
               <div className="mt-4 flex items-center gap-3 text-sm text-foreground/70">
                 <Flag className="w-5 h-5 text-accent shrink-0" aria-hidden="true" />
                 <span>Nueva Aurora como capital de una soberanía interna, externa y digital.</span>
+              </div>
+            </GlassCard>
+
+            <GlassCard hover className="p-4 sm:p-5 overflow-hidden sm:col-span-2 lg:col-span-1">
+              <div className="rounded-xl overflow-hidden border border-cyan-neon/35 shadow-[0_0_26px_rgba(34,211,238,0.2)] bg-background/30">
+                <img src={mapa} alt="Mapa territorial estratégico de Neogranada" className="w-full h-auto object-cover" />
+              </div>
+              <div className="mt-4 flex items-center gap-3 text-sm text-foreground/70">
+                <Map className="w-5 h-5 text-cyan-neon shrink-0" aria-hidden="true" />
+                <span>Mapa territorial con capital, regiones estratégicas, zona económica exclusiva y rutas de conexión nacional.</span>
               </div>
             </GlassCard>
           </div>

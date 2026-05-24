@@ -47,13 +47,13 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/82 backdrop-blur-md border-b border-cyan-neon/35 shadow-[0_0_26px_rgba(34,211,238,0.11)] min-h-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between gap-4">
-        <Link to="/inicio" className="flex items-center gap-3 min-w-0 outline-none focus-visible:ring-2 focus-visible:ring-cyan-neon/70 rounded-full">
+        <Link to="/inicio" className="flex items-center gap-3 shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-cyan-neon/70 rounded-full">
           <img
             src={escudoNeogranada}
             alt="Escudo de Neogranada"
             className="h-24 w-24 shrink-0 object-contain drop-shadow-[0_0_20px_rgba(34,211,238,0.48)]"
           />
-          <span className="font-heading font-bold text-base sm:text-xl tracking-wider uppercase truncate">Neogranada</span>
+          <span className="font-heading font-bold text-sm sm:text-lg xl:text-xl tracking-wider uppercase whitespace-nowrap">Neogranada</span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-1 text-sm font-medium">
