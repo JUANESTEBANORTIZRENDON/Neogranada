@@ -11,7 +11,7 @@ import ConstitucionView from "./routes/ConstitucionView";
 import PoderPublicoView from "./routes/PoderPublicoView";
 import MonedaView from "./routes/MonedaView";
 import MiCuentaView from "./routes/MiCuentaView";
-import cityBackground from "../imports/image.png";
+import cityBackground from "../imports/optimized/city-bg-preview.jpg";
 
 function ScrollToTop() {
   const { pathname } = useLocation();

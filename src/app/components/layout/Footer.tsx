@@ -1,5 +1,5 @@
 ﻿import { Link } from "react-router";
-import escudoNeogranada from "../../../imports/escudo-neogranada.png";
+import escudoNeogranada from "../../../imports/optimized/nav-shield-180.png";
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <div className="flex items-center justify-center md:justify-start gap-4">
-            <img src={escudoNeogranada} alt="Escudo de Neogranada" className="h-11 w-11 object-contain drop-shadow-[0_0_10px_rgba(212,175,55,0.28)]" />
+            <img src={escudoNeogranada} alt="Escudo de Neogranada" className="h-11 w-11 object-contain drop-shadow-[0_0_10px_rgba(212,175,55,0.28)]" loading="lazy" decoding="async" />
             <div>
               <span className="block text-sm font-bold text-foreground uppercase tracking-wider">Neogranada</span>
               <span className="block text-xs text-foreground/50">República de Neogranada</span>

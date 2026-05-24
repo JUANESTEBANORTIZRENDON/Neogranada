@@ -2,12 +2,12 @@ import { Banknote, CheckCircle2, Coins, Landmark, Leaf, ShieldCheck, Sparkles } 
 import GlassCard from "../components/cards/GlassCard";
 import SubmoduleBackButton from "../components/layout/SubmoduleBackButton";
 import { useAnimeOnView } from "../hooks/useAnimeOnView";
-import billete10 from "../../imports/BILLETE 10.png";
-import billete20 from "../../imports/BILLETE 20 .png";
-import billete50 from "../../imports/BILLETE 50.png";
-import billete100 from "../../imports/BILLETE 100.png";
-import billete200 from "../../imports/BILLETE 200.png";
-import billete500 from "../../imports/BLLETE 500.png";
+import billete10 from "../../imports/optimized/bill-10-preview.jpg";
+import billete20 from "../../imports/optimized/bill-20-preview.jpg";
+import billete50 from "../../imports/optimized/bill-50-preview.jpg";
+import billete100 from "../../imports/optimized/bill-100-preview.jpg";
+import billete200 from "../../imports/optimized/bill-200-preview.jpg";
+import billete500 from "../../imports/optimized/bill-500-preview.jpg";
 import monedas from "../../imports/Monedas.png";
 
 const bills = [
@@ -116,6 +116,8 @@ export default function MonedaView() {
               src={monedas}
               alt="Monedas de la República de Neogranada"
               className="w-full rounded-2xl border border-glass-border bg-background/35 object-cover shadow-[0_0_28px_rgba(6,182,212,0.12)]"
+              loading="lazy"
+              decoding="async"
             />
           </GlassCard>
 
@@ -150,6 +152,8 @@ export default function MonedaView() {
                     src={bill.image}
                     alt={`Billete de ${bill.value} de Neogranada`}
                     className="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="flex items-start justify-between gap-3">

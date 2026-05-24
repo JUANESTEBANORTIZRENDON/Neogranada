@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu, Moon, Search, Sun, User, X } from "lucide-react";
-import escudoNeogranada from "../../../imports/escudo-neogranada.png";
+import escudoNeogranada from "../../../imports/optimized/nav-shield-180.png";
 
 const navItems = [
   { label: "Inicio", to: "/inicio" },
@@ -52,6 +52,7 @@ export default function Navbar() {
             src={escudoNeogranada}
             alt="Escudo de Neogranada"
             className="h-24 w-24 shrink-0 object-contain drop-shadow-[0_0_20px_rgba(34,211,238,0.48)]"
+            decoding="async"
           />
           <span className="font-heading font-bold text-sm sm:text-lg xl:text-xl tracking-wider uppercase whitespace-nowrap">Neogranada</span>
         </Link>
