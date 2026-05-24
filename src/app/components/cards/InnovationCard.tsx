@@ -13,10 +13,10 @@ export default function InnovationCard({ innovation }: InnovationCardProps) {
   return (
     <Link
       to={`/innovaciones/${innovation.slug}`}
-      className="group h-full w-full text-left outline-none focus-visible:ring-2 focus-visible:ring-cyan-neon/70 rounded-2xl"
+      className="group relative z-0 h-full w-full text-left outline-none focus-visible:ring-2 focus-visible:ring-cyan-neon/70 rounded-2xl hover:z-30 focus-visible:z-30"
       aria-label={`Abrir módulo de ${innovation.title}`}
     >
-      <GlassCard hover className="p-6 sm:p-8 h-full min-h-[350px] flex flex-col justify-between relative overflow-hidden">
+      <GlassCard hover className="p-6 sm:p-8 h-full min-h-[350px] group-hover:min-h-[560px] group-focus-visible:min-h-[560px] flex flex-col justify-between relative overflow-visible transition-[min-height,background-color,border-color,box-shadow] duration-300">
         <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-cyan-neon/10 to-transparent opacity-75 pointer-events-none" />
         <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-cyan-neon/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -33,12 +33,12 @@ export default function InnovationCard({ innovation }: InnovationCardProps) {
           <p className="text-foreground/70 text-sm mb-6 leading-relaxed">{innovation.shortDesc}</p>
         </div>
 
-        <div className="pointer-events-none absolute inset-3 z-20 flex flex-col justify-between rounded-2xl border border-cyan-neon/40 bg-background/95 p-5 opacity-0 translate-y-2 shadow-2xl shadow-cyan-neon/10 backdrop-blur-2xl transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0">
+        <div className="pointer-events-none absolute left-3 right-3 top-3 z-20 min-h-[calc(100%-1.5rem)] rounded-2xl border border-cyan-neon/40 bg-background/96 p-5 opacity-0 translate-y-2 shadow-2xl shadow-cyan-neon/10 backdrop-blur-2xl transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-neon mb-3">Información institucional</p>
             <p className="text-sm leading-relaxed text-foreground/82">{innovation.longDesc}</p>
           </div>
-          <div className="mt-4">
+          <div className="mt-5">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent mb-3">Beneficios esperados</p>
             <ul className="space-y-2">
               {innovation.benefits.map((benefit) => (
