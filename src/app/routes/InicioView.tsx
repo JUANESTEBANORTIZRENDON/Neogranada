@@ -51,8 +51,8 @@ export default function InicioView() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
             <GlassCard hover className="p-4 sm:p-5 overflow-hidden md:col-span-2">
-              <div className="aspect-[21/9] rounded-xl overflow-hidden border border-glass-border shadow-[0_0_30px_rgba(6,182,212,0.24)] bg-background/30">
-                <img src={escudo} alt="Escudo de Neogranada" className="w-full h-full object-cover object-center" />
+              <div className="aspect-[21/9] rounded-xl overflow-hidden border border-glass-border shadow-[0_0_30px_rgba(6,182,212,0.24)] bg-background/45">
+                <img src={escudo} alt="Escudo de Neogranada" className="w-full h-full object-contain object-center p-3 sm:p-4" />
               </div>
               <div className="mt-4 flex items-start gap-3 text-sm text-foreground/70">
                 <ShieldCheck className="w-5 h-5 text-accent shrink-0" aria-hidden="true" />
