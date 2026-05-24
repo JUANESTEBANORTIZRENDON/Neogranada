@@ -12,49 +12,50 @@ import monedas from "../../imports/Monedas.png";
 
 const bills = [
   {
-    value: "10 GN",
+    value: "10 SDG",
     image: billete10,
     theme: "Ciudadanía",
-    description: "Representa el acceso cotidiano a servicios públicos, educación básica y participación local.",
+    description: "Billete de circulación básica para servicios cotidianos, educación local y participación ciudadana.",
   },
   {
-    value: "20 GN",
+    value: "20 SDG",
     image: billete20,
     theme: "Cultura",
-    description: "Simboliza memoria, diversidad regional y transmisión de saberes entre generaciones.",
+    description: "Representa memoria cultural, vida regional y transmisión de saberes entre generaciones.",
   },
   {
-    value: "50 GN",
+    value: "50 SDG",
     image: billete50,
     theme: "Justicia",
     description: "Evoca equilibrio institucional, legalidad y protección de derechos fundamentales.",
   },
   {
-    value: "100 GN",
+    value: "100 SDG",
     image: billete100,
     theme: "Innovación",
     description: "Conecta ciencia, tecnología pública y soberanía digital al servicio de la ciudadanía.",
   },
   {
-    value: "200 GN",
+    value: "200 SDG",
     image: billete200,
     theme: "Desarrollo",
     description: "Refleja infraestructura, productividad regional y sostenibilidad económica.",
   },
   {
-    value: "500 GN",
+    value: "500 SDG",
     image: billete500,
     theme: "Soberanía",
     description: "Reserva simbólica de confianza estatal, estabilidad financiera y visión de futuro.",
   },
 ];
 
-const symbols = [
-  "El ojo tecnológico expresa vigilancia pública, transparencia digital y control ciudadano permanente.",
-  "La balanza y la llave recuerdan que la justicia abre derechos y limita el abuso del poder.",
-  "El león dorado representa dignidad nacional, liderazgo sereno y defensa de la soberanía.",
-  "Los circuitos y el chip señalan independencia tecnológica, datos protegidos e innovación estatal.",
-  "Los laureles unen paz, mérito, sostenibilidad y reconocimiento al servicio público.",
+const coinSymbols = [
+  "Los Soles son la unidad principal de intercambio y aparecen en piezas de 1, 2, 5 y 10 para pagos de mayor valor cotidiano.",
+  "Las Centellas funcionan como fracción menor del sistema monetario, pensadas para pagos pequeños y ajustes precisos.",
+  "La estrella superior simboliza orientación pública, unidad nacional y aspiración de futuro.",
+  "Los laureles laterales representan mérito, paz institucional y reconocimiento al trabajo ciudadano.",
+  "La flor inferior funciona como emblema de identidad territorial, fertilidad cultural y vínculo con la tierra neogranadina.",
+  "Los acabados dorado, plateado y cobre distinguen jerarquías de valor y facilitan la lectura visual de cada moneda.",
 ];
 
 const economyPillars = [
@@ -103,13 +104,13 @@ export default function MonedaView() {
                 <Banknote className="w-6 h-6 text-accent" aria-hidden="true" />
               </div>
               <div>
-                <h2 className="text-2xl font-heading font-bold text-foreground uppercase tracking-wide">Granadino Neogranadino</h2>
-                <p className="text-sm text-foreground/55 mt-1">Moneda institucional propuesta para el portal.</p>
+                <h2 className="text-2xl font-heading font-bold text-foreground uppercase tracking-wide">Sol Neogranadino</h2>
+                <p className="text-sm text-foreground/55 mt-1">Moneda nacional representada en billetes y monedas.</p>
               </div>
             </div>
             <p className="text-sm md:text-base text-foreground/80 leading-relaxed mb-5">
-              Para esta representación del Estado, la moneda se denomina Granadino Neogranadino y se identifica con la sigla GN.
-              Sus valores principales son 10, 20, 50, 100, 200 y 500 GN, acompañados por monedas de circulación cotidiana para pagos menores.
+              La moneda de Neogranada se denomina Sol Neogranadino. En los billetes aparece como Sol de Granada y se identifica con la sigla SDG.
+              Sus valores principales son 10, 20, 50, 100, 200 y 500 SDG, acompañados por monedas de Soles y Centellas para circulación cotidiana.
             </p>
             <img
               src={monedas}
@@ -124,12 +125,12 @@ export default function MonedaView() {
                 <Sparkles className="w-6 h-6 text-accent" aria-hidden="true" />
               </div>
               <div>
-                <h2 className="text-2xl font-heading font-bold text-foreground uppercase tracking-wide">Simbolismo monetario</h2>
-                <p className="text-sm text-foreground/55 mt-1">Cada pieza comunica una idea de Estado.</p>
+                <h2 className="text-2xl font-heading font-bold text-foreground uppercase tracking-wide">Simbolismo de las monedas</h2>
+                <p className="text-sm text-foreground/55 mt-1">Símbolos visibles en las piezas del sistema.</p>
               </div>
             </div>
             <ul className="space-y-4">
-              {symbols.map((symbol) => (
+              {coinSymbols.map((symbol) => (
                 <li key={symbol} className="flex items-start gap-3 text-sm text-foreground/84 leading-relaxed">
                   <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" aria-hidden="true" />
                   <span>{symbol}</span>
@@ -145,14 +146,18 @@ export default function MonedaView() {
             {bills.map((bill) => (
               <GlassCard hover key={bill.value} className="p-4 sm:p-5 group">
                 <div className="relative overflow-hidden rounded-xl border border-glass-border bg-background/35 mb-4">
-                  <img src={bill.image} alt={`Billete de ${bill.value} de Neogranada`} className="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
+                  <img
+                    src={bill.image}
+                    alt={`Billete de ${bill.value} de Neogranada`}
+                    className="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  />
                 </div>
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <h3 className="text-2xl font-heading font-bold text-foreground">{bill.value}</h3>
                     <p className="text-accent text-xs font-bold uppercase tracking-[0.18em] mt-1">{bill.theme}</p>
                   </div>
-                  <span className="rounded-full border border-accent/25 bg-accent/10 px-3 py-1 text-xs font-bold text-accent">GN</span>
+                  <span className="rounded-full border border-accent/25 bg-accent/10 px-3 py-1 text-xs font-bold text-accent">SDG</span>
                 </div>
                 <p className="text-sm text-foreground/72 leading-relaxed mt-4">{bill.description}</p>
               </GlassCard>
