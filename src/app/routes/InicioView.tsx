@@ -14,7 +14,7 @@ export default function InicioView() {
       <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(128,0,32,0.22),rgba(11,25,44,0.14)_45%,rgba(212,175,55,0.08))] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-8 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] gap-8 lg:gap-10 items-center">
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 text-accent text-xs sm:text-sm font-bold uppercase tracking-[0.22em] mb-5">
               <Sparkles className="w-4 h-4" aria-hidden="true" />
@@ -49,32 +49,32 @@ export default function InicioView() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-5">
-            <GlassCard hover className="p-4 sm:p-5 overflow-hidden">
-              <div className="aspect-[16/10] rounded-xl overflow-hidden border border-glass-border shadow-[0_0_30px_rgba(6,182,212,0.24)] bg-background/30">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
+            <GlassCard hover className="p-4 sm:p-5 overflow-hidden md:col-span-2">
+              <div className="aspect-[21/9] rounded-xl overflow-hidden border border-glass-border shadow-[0_0_30px_rgba(6,182,212,0.24)] bg-background/30">
                 <img src={escudo} alt="Escudo de Neogranada" className="w-full h-full object-cover object-center" />
               </div>
-              <div className="mt-4 flex items-start gap-3 text-xs xl:text-sm text-foreground/70">
+              <div className="mt-4 flex items-start gap-3 text-sm text-foreground/70">
                 <ShieldCheck className="w-5 h-5 text-accent shrink-0" aria-hidden="true" />
                 <span>Estado social, democrático y tecnológico de derecho.</span>
               </div>
             </GlassCard>
 
             <GlassCard hover className="p-4 sm:p-5 overflow-hidden">
-              <div className="aspect-[16/10] rounded-xl overflow-hidden border border-glass-border shadow-[0_0_20px_rgba(212,175,55,0.18)] bg-background/30">
+              <div className="aspect-[16/9] rounded-xl overflow-hidden border border-glass-border shadow-[0_0_20px_rgba(212,175,55,0.18)] bg-background/30">
                 <img src={bandera} alt="Bandera de Neogranada" className="w-full h-full object-cover object-center" />
               </div>
-              <div className="mt-4 flex items-start gap-3 text-xs xl:text-sm text-foreground/70">
+              <div className="mt-4 flex items-start gap-3 text-sm text-foreground/70">
                 <Flag className="w-5 h-5 text-accent shrink-0" aria-hidden="true" />
                 <span>Nueva Aurora como capital de una soberanía interna, externa y digital.</span>
               </div>
             </GlassCard>
 
             <GlassCard hover className="p-4 sm:p-5 overflow-hidden">
-              <div className="aspect-[16/10] rounded-xl overflow-hidden border border-cyan-neon/35 shadow-[0_0_26px_rgba(34,211,238,0.2)] bg-background/30">
+              <div className="aspect-[16/9] rounded-xl overflow-hidden border border-cyan-neon/35 shadow-[0_0_26px_rgba(34,211,238,0.2)] bg-background/30">
                 <img src={mapa} alt="Mapa territorial estratégico de Neogranada" className="w-full h-full object-cover object-center" />
               </div>
-              <div className="mt-4 flex items-start gap-3 text-xs xl:text-sm text-foreground/70">
+              <div className="mt-4 flex items-start gap-3 text-sm text-foreground/70">
                 <Map className="w-5 h-5 text-cyan-neon shrink-0" aria-hidden="true" />
                 <span>Mapa territorial con capital, regiones estratégicas, zona económica exclusiva y rutas de conexión nacional.</span>
               </div>
