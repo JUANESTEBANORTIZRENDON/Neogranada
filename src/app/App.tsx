@@ -9,6 +9,7 @@ import InnovationSystemView from "./routes/InnovationSystemView";
 import ParticipacionView from "./routes/ParticipacionView";
 import ConstitucionView from "./routes/ConstitucionView";
 import PoderPublicoView from "./routes/PoderPublicoView";
+import MonedaView from "./routes/MonedaView";
 import MiCuentaView from "./routes/MiCuentaView";
 import cityBackground from "../imports/image.png";
 
@@ -38,6 +39,7 @@ function AppRoutes() {
           <Route path="/constitucion" element={<ConstitucionView />} />
           <Route path="/constitucion-base" element={<ConstitucionView />} />
           <Route path="/poder-publico" element={<PoderPublicoView />} />
+          <Route path="/moneda" element={<MonedaView />} />
           <Route path="/mi-cuenta" element={<MiCuentaView />} />
           <Route path="*" element={<Navigate to="/inicio" replace />} />
         </Routes>

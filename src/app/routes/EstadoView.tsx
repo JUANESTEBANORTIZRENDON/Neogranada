@@ -1,5 +1,5 @@
 ﻿import { Link } from "react-router";
-import { ArrowRight, BookOpenText, CheckCircle2, Landmark } from "lucide-react";
+import { ArrowRight, BookOpenText, CheckCircle2, Coins, Landmark } from "lucide-react";
 import GlassCard from "../components/cards/GlassCard";
 import { stateDetails, stateMetrics, stateSummary, territorialData } from "../data/stateData";
 import { useAnimeOnView } from "../hooks/useAnimeOnView";
@@ -66,7 +66,7 @@ export default function EstadoView() {
           </GlassCard>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-6">
           <Link to="/constitucion-base" className="outline-none focus-visible:ring-2 focus-visible:ring-accent/70 rounded-2xl">
             <GlassCard hover className="p-6 sm:p-7 h-full group bg-primary/25">
               <div className="flex items-start gap-4">
@@ -96,6 +96,25 @@ export default function EstadoView() {
                   <h2 className="text-xl md:text-2xl font-heading font-bold text-foreground uppercase leading-tight">Organización del poder político</h2>
                   <p className="text-sm text-foreground/68 leading-relaxed mt-3">
                     Explora la federación, el sistema tecnocrático de Asamblea, el ejecutivo dual y las ramas Ejecutiva, Legislativa y Judicial.
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-accent text-sm font-bold uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                    Abrir módulo <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </span>
+                </div>
+              </div>
+            </GlassCard>
+          </Link>
+
+          <Link to="/moneda" className="outline-none focus-visible:ring-2 focus-visible:ring-accent/70 rounded-2xl md:col-span-2 xl:col-span-1">
+            <GlassCard hover className="p-6 sm:p-7 h-full group bg-primary/25">
+              <div className="flex items-start gap-4">
+                <div className="w-14 h-14 rounded-2xl bg-accent/10 border border-accent/30 flex items-center justify-center shrink-0">
+                  <Coins className="w-7 h-7 text-accent" aria-hidden="true" />
+                </div>
+                <div className="min-w-0">
+                  <h2 className="text-xl md:text-2xl font-heading font-bold text-foreground uppercase leading-tight">Moneda</h2>
+                  <p className="text-sm text-foreground/68 leading-relaxed mt-3">
+                    Explora los billetes y monedas de Neogranada, sus símbolos, valores y la economía social, tecnológica y sostenible del Estado.
                   </p>
                   <span className="mt-5 inline-flex items-center gap-2 text-accent text-sm font-bold uppercase tracking-wider group-hover:translate-x-1 transition-transform">
                     Abrir módulo <ArrowRight className="w-4 h-4" aria-hidden="true" />
